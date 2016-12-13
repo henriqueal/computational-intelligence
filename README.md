@@ -16,6 +16,24 @@ The implementation of each step can be found at:
 
 For example, if you want to execute the file ex1.py you can just type this command on terminal:
 ```bash
-python ex1.py
+> python ex1.py
 ```
-The results should be:
+The results should be this format:
+```bash
+Epochs of training = 1
+00.txt
+[0]
+01.txt
+[0]
+02.txt
+[0]
+03.txt
+[0]
+...
+57.txt
+[0]
+58.txt
+[0]
+59.txt
+[1]
+```
