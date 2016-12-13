@@ -42,6 +42,7 @@ This results indicates:
     01.txt
     [0]
     ```
-    Indicates that ANC recognize the input that contains in file 01.txt as a digit 0.
+    Indicates that ANC recognize the input of file 01.txt as a digit 0.
     
-    
+
+The report/report.pdf shows the experimental results.
