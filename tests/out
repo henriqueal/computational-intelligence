@@ -1,0 +1,589 @@
+\centering Arq:  00.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 0\]
+ 	
+\centering Arq:  01.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  02.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  03.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 1 & 0\\
+1 & 1 & 0 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  04.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 1 & 0 & 0 & 1\\
+1 & 0 & 1 & 0 & 1\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  05.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  06.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 1 & 1\\
+1 & 0 & 1 & 0 & 1\\
+1 & 1 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  07.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 0 & 1 & 1\\
+1 & 1 & 0 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  08.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  09.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 0 & 1 & 0 & 1\\
+1 & 1 & 0 & 1 & 1\\
+1 & 1 & 0 & 1 & 1\\
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  10.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 0 & 1 & 0 & 1\\
+1 & 0 & 1 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  11.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  12.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  13.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  14.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 1\\
+0 & 0 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  15.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 1\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 1\\
+1 & 1 & 0 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  16.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 0 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  17.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+1 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  18.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 0 & 1\\
+0 & 0 & 1 & 0 & 1\\
+0 & 0 & 1 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  19.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 0 \end{array} \right) = saida : 1\]
+
+\centering Arq:  20.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 0 & 1 & 0\\
+0 & 0 & 1 & 1 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 2\]
+
+\centering Arq:  21.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 2\]
+
+\centering Arq:  22.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  23.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 2\]
+
+\centering Arq:  24.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 0 & 1 \end{array} \right) = saida : 2\]
+
+\centering Arq:  25.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 0 & 1 & 0\\
+0 & 1 & 1 & 0 & 1\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 0 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  26.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+1 & 0 & 0 & 1 & 1 \end{array} \right) = saida : 2\]
+
+\centering Arq:  27.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  28.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 0 & 1\\
+0 & 1 & 0 & 1 & 0\\
+1 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 1 & 0\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  29.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  30.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  31.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  32.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  33.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  34.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 1\]
+
+\centering Arq:  35.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 0 & 1 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  36.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 0 & 1 & 0 \end{array} \right) = saida : 1\]
+
+\centering Arq:  37.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  38.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 1 & 1 & 1\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 1 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  39.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 0 & 1\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 0 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  40.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0 \end{array} \right) = saida : 1\]
+
+\centering Arq:  41.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0 \end{array} \right) = saida : 1\]
+
+\centering Arq:  42.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0 \end{array} \right) = saida : 1\]
+
+\centering Arq:  43.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 1 & 0 \end{array} \right) = saida : 1\]
+
+\centering Arq:  44.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 \end{array} \right) = saida : 1\]
+
+\centering Arq:  45.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 1\]
+
+\centering Arq:  46.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 1 & 0 \end{array} \right) = saida : 1\]
+
+\centering Arq:  47.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0 \end{array} \right) = saida : 1\]
+
+\centering Arq:  48.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  49.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 0 \end{array} \right) = saida : 1\]
+
+\centering Arq:  50.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 1 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  51.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  52.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  53.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 0 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  54.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  55.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+\centering Arq:  56.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+\centering Arq:  57.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+\centering Arq:  58.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+\centering Arq:  59.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 0 & 1\\
+0 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  A.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  C.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  E.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 0\\
+1 & 0 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  H.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  N.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 0 & 0 & 1\\
+1 & 0 & 1 & 0 & 1\\
+1 & 0 & 1 & 0 & 1\\
+1 & 0 & 0 & 1 & 1\\
+1 & 0 & 0 & 0 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  T.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0 \end{array} \right) = saida : 1\]

@@ -1,0 +1,1306 @@
+
+\documentclass[12pt]{article}
+\usepackage[latin1]{inputenc}
+%\pagestyle{plain}
+%\pagenumbering{num_style}
+\textwidth 16cm \textheight 23.2cm
+\voffset -1.5cm \hoffset -1.4cm
+
+\usepackage{graphicx,url}
+\usepackage{graphicx}
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+
+
+\definecolor{Blue}{rgb}{0,0,0.9}
+
+\begin{document}
+
+\fancyhead{}
+\fancyfoot{}
+\chead{}
+\lhead{\textbf{UFU - Universidade Federal de Uberlândia}}
+\rhead{\hfill \includegraphics[height=10mm]{images/logo_ufuazul.png}}
+\lfoot{}
+\rfoot{}
+
+
+\newpage
+
+\pagestyle{fancy}
+
+
+\vspace*{0.0cm}
+\begin{center}
+\LARGE \textbf{Redes Neuronais Artificiais Aplicadas na Classificação de Caracteres}
+\end{center}
+\noindent \textbf{Nome: Henrique Araújo Lima}
+
+
+\section{Introdução}
+Este documento descreve os resultados obtidos da rede neuronal artificial (RNA) no problema de reconhecimento de caracteres. O objetivo do trabalho é desenvolver uma RNA para reconhecer os caracteres: 0, 1, 2, 3, 4 e 5. A representação gráfica dos caracteres pode ser visualizada na Figura \ref{fig:caracteres}.
+
+\begin{figure}[h]
+\centering
+\label{fig:caracteres}
+\includegraphics[scale=0.55]{images/caracteres.png}
+\caption{Caracteres a serem reconhecidos pela RNA.}
+\end{figure}
+
+\section{Primeiro exercício}
+A primeira tarefa consiste em treinar uma rede perceptron com um único neurônio de saída para aprender 
+os padrões 0 e 1:
+
+Seja Y a saída do neurônio. O padrão deve ser reconhecido da seguinte 
+forma:
+\begin{center}
+
+Y=0   $\rightarrow$   Padrão reconhecido é o 0\\
+Y=1   $\rightarrow$ reconhecido é o 1
+\end{center}
+
+\begin{enumerate}
+
+\item Imprimir o vetor(matriz [$6 \times 5$]) $W$ de pesos obtidos com o treinamento:
+\begin{center}
+
+ 
+\[ \left( \begin{array}{ccccc}
+0 & -1 & 0 & -1 & 0 \\
+-1 & 1 & 1 & 0 & -1 \\
+-1 & 0 & 1 & 0 & -1 \\
+-1 & 0 & 1 & 0 & -1 \\
+-1 & 0 & 1 & 0 & -1 \\
+1 & 0 & 0 & 0 & 1  \end{array} \right)\] 
+
+$W_0 = 0$
+\end{center}
+\item Computar o número de épocas necessárias para aprender os padrões:
+
+ Foram necessárias 3 épocas.
+
+
+\item Investigar qual é a saída da rede quando padrões distorcidos de 0 e 1 são apresentados como entrada (inserir 10 exemplos distorcidos de cada padrão).
+
+\large{\textbf{Distorções do "0":}}
+
+\centering Arq:  00.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 0\]
+ 	
+\centering Arq:  01.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  02.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  03.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 1 & 0\\
+1 & 1 & 0 & 1 & 1 \end{array} \right) = saida : 0\]
+
+\centering Arq:  04.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 1 & 0 & 0 & 1\\
+1 & 0 & 1 & 0 & 1\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  05.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 0\]
+
+\centering Arq:  06.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 1 & 1\\
+1 & 0 & 1 & 0 & 1\\
+1 & 1 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  07.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 0 & 1 & 1\\
+1 & 1 & 0 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  08.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 0\]
+
+\centering Arq:  09.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 0 & 1 & 0 & 1\\
+1 & 1 & 0 & 1 & 1\\
+1 & 1 & 0 & 1 & 1\\
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+
+
+\large{\textbf{Distorções do "1":}}
+
+\centering Arq:  10.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 0 & 1 & 0 & 1\\
+1 & 0 & 1 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  11.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  12.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  13.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  14.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 1\\
+0 & 0 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  15.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 1\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 1\\
+1 & 1 & 0 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  16.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 0 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  17.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+1 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  18.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 0 & 1\\
+0 & 0 & 1 & 0 & 1\\
+0 & 0 & 1 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  19.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 0 \end{array} \right) = saida : 1\]
+
+
+
+
+
+\item Investigar qual é a saída da rede quando padrões bem diferentes de 0 e 1 são apresentados como entrada.
+
+\centering Arq:  20.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 0 & 1 & 0\\
+0 & 0 & 1 & 1 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  30.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 0\]
+
+\centering Arq:  40.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  50.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 1 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 0\]
+
+\end{enumerate}
+
+\newpage
+
+
+\section{Segundo exercício}
+Treinar uma rede perceptron com dois neurônios de saída para aprender os padrões 0 e 1:
+
+Seja Y1 a saída do primeiro neurônio e Y2 a saída do segundo neurônio. O padrão deve ser reconhecido da seguinte forma:
+
+\begin{center}
+Y1=1   e    Y2=0   $\rightarrow$   Padrão reconhecido é 0 \\
+Y1=0   e    Y2=1   $\rightarrow$   Padrão reconhecido é 1 \\
+Outros casos   $\rightarrow$   Padrão não foi reconhecido 
+\end{center}
+
+\begin{enumerate}
+
+\item Imprimir a matriz $W$ de pesos obtidos com o treinamento.
+
+\begin{center}
+
+ Pesos referentes ao neurônio 0
+ 
+
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 0 & 1 & 0  \\
+1 & -1 & -1 & 0 & 1  \\
+1 & 0 & -1 & 0 & 1  \\
+1 & 0 & -1 & 0 & 1  \\
+1 & 0 & -1 & 0 & 1  \\
+-1 & 0 & 0 & 0 & -1  \end{array} \right)\]
+
+$W_0=0$
+
+
+ Pesos referentes ao neurônio 1
+ 
+
+\[ \left( \begin{array}{ccccc}
+0 & -1 & 0 & -1 & 0 \\
+-1 & 1 & 1 & 0 & -1 \\
+-1 & 0 & 1 & 0 & -1 \\
+-1 & 0 & 1 & 0 & -1 \\
+-1 & 0 & 1 & 0 & -1 \\
+1 & 0 & 0 & 0 & 1 \ \end{array} \right)\]
+$W_0=0$
+ \end{center}
+\item Computar o número de épocas necessárias para aprender os padrões.
+
+Para o neurônio 0 foram necessárias 2 épocas.\\
+Para o neurônio 1 foram necessárias 3 épocas.
+
+
+\item Investigar qual é a saída da rede quando padrões distorcidos de 0 e 1 são apresentados como entrada (inserir 10 exemplos distorcidos de cada padrão).
+
+\large{\textbf{Distorções do "0":}}
+
+\centering Arq:  00.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 0\]
+ 	
+\centering Arq:  01.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  02.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  03.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 1 & 0\\
+1 & 1 & 0 & 1 & 1 \end{array} \right) = saida : 0\]
+
+\centering Arq:  04.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 1 & 0 & 0 & 1\\
+1 & 0 & 1 & 0 & 1\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  05.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 0\]
+
+\centering Arq:  06.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 1 & 1\\
+1 & 0 & 1 & 0 & 1\\
+1 & 1 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  07.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 0 & 1 & 1\\
+1 & 1 & 0 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  08.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 0\]
+
+\centering Arq:  09.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 0 & 1 & 0 & 1\\
+1 & 1 & 0 & 1 & 1\\
+1 & 1 & 0 & 1 & 1\\
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+
+
+\large{\textbf{Distorções do "1":}}
+
+\centering Arq:  10.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 0 & 1 & 0 & 1\\
+1 & 0 & 1 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  11.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  12.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  13.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  14.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 1\\
+0 & 0 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  15.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 1\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 1\\
+1 & 1 & 0 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  16.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 0 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  17.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+1 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  18.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 0 & 1\\
+0 & 0 & 1 & 0 & 1\\
+0 & 0 & 1 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  19.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 0 \end{array} \right) = saida : 1\]
+
+
+
+\item Investigar qual é a saída da rede quando padrões bem diferentes de 0 e 1 são apresentados como entrada (usar os padrões 2, 3, 4 e 5).
+
+
+\centering Arq:  20.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 0 & 1 & 0\\
+0 & 0 & 1 & 1 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  30.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 0\]
+
+\centering Arq:  40.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  50.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 1 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 0\]
+
+
+\end{enumerate}
+
+
+\newpage
+
+\section{Terceiro exercício}
+Treinar uma rede perceptron com seis neurônios de saída para aprender todos os padrões  de 0  a 5:
+
+Seja Yi a saída do neurônio i (i variando de 1 a 6). O padrão deve ser reconhecido da seguinte forma:
+\begin{center}
+Y1= 1 e Y2=0 e Y3=0 e Y4=0 e Y5=0 e Y6=0 $\rightarrow$   Padrão reconhecido é 0\\
+Y1= 0 e Y2=1 e Y3=0 e Y4=0 e Y5=0 e Y6=0 $\rightarrow$   Padrão reconhecido é 1\\
+Y1= 0 e Y2=0 e Y3=1 e Y4=0 e Y5=0 e Y6=0 $\rightarrow$   Padrão reconhecido é 2\\
+Y1= 0 e Y2=0 e Y3=0 e Y4=1 e Y5=0 e Y6=0 $\rightarrow$   Padrão reconhecido é 3\\
+Y1= 0 e Y2=0 e Y3=0 e Y4=0 e Y5=1 e Y6=0 $\rightarrow$   Padrão reconhecido é 4\\
+Y1= 0 e Y2=0 e Y3=0 e Y4=0 e Y5=0 e Y6=1 $\rightarrow$   Padrão reconhecido é 5\\
+Outros casos   $\rightarrow$   Padrão não foi reconhecido
+\end{center}
+
+\begin{enumerate}
+
+\item Imprimir a matriz $W$ de pesos obtidos com o treinamento.
+\begin{center}
+Pesos referentes ao neurônio 0
+\[ \left( \begin{array}{ccccc}
+-1 & 1 & 0 & 0 & -1\\
+1 & -1 & -1 & -1 & 1\\
+1 & -1 & -2 & -2 & 1\\
+1 & -1 & -2 & -1 & 1\\
+2 & 0 & -1 & -1 & 1\\
+-1 & 0 & 0 & -1 & -2 \end{array} \right)\]
+$W_0=-1$
+
+Pesos referentes ao neurônio 1
+\[ \left( \begin{array}{ccccc}
+0 & -1 & 0 & -1 & 0\\
+0 & 0 & 1 & -1 & 0\\
+0 & 0 & 1 & -1 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & -1 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 \end{array} \right)\]
+$W_0=0$
+
+Pesos referentes ao neurônio 2
+\[ \left( \begin{array}{ccccc}
+-1 & 0 & 0 & -1 & -2\\
+-1 & 1 & 0 & 1 & -1\\
+-1 & -2 & -2 & -1 & -2\\
+-1 & -1 & 1 & -1 & -2\\
+0 & 2 & 0 & -1 & -2\\
+2 & 0 & 0 & -1 & 0 \end{array} \right)\]
+$W_0=-1$
+
+Pesos referentes ao neurônio 3
+\[ \left( \begin{array}{ccccc}
+-1 & 0 & 0 & -1 & 0\\
+-1 & -5 & 0 & -1 & 5\\
+-1 & 0 & 0 & -1 & 0\\
+-1 & -1 & -1 & -1 & 0\\
+0 & 0 & 0 & -1 & 0\\
+0 & 0 & 0 & -1 & 0 \end{array} \right)\]
+$W_0=-1$
+
+Pesos referentes ao neurônio 4
+\[ \left( \begin{array}{ccccc}
+1 & -1 & -1 & 0 & -1\\
+1 & -1 & 0 & 1 & 0\\
+1 & -1 & -1 & 0 & -1\\
+1 & 1 & 1 & 1 & -1\\
+0 & 0 & 0 & 1 & -1\\
+0 & -1 & -1 & 0 & -1 \end{array} \right)\]
+$W_0=0$
+
+Pesos referentes ao neurônio 5
+\[ \left( \begin{array}{ccccc}
+0 & 0 & -1 & 0 & 2\\
+-1 & 3 & -1 & -1 & -4\\
+-1 & 2 & 1 & 1 & 1\\
+-1 & 0 & -2 & 0 & 1\\
+-1 & -1 & -1 & 0 & 1\\
+-2 & -1 & -1 & -1 & 0  \end{array} \right)\]
+$W_0=-1$
+
+
+\end{center}
+
+\item Computar o número de épocas necessárias para aprender os padrões.
+
+Para o neurônio 0 foram necessárias 3 épocas.\\
+Para o neurônio 1 foram necessárias 2 épocas. \\
+Para o neurônio 2 foram necessárias 3 épocas.\\
+Para o neurônio 3 foram necessárias 6 épocas. \\
+Para o neurônio 4 foram necessárias 2 épocas.\\
+Para o neurônio 5 foram necessárias 6 épocas. 
+
+
+\item Investigar qual é a saída da rede quando padrões distorcidos de 0 a 6 são apresentados como entrada (inserir 10 exemplos distorcidos de cada padrão).
+
+\centering Arq:  00.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 0\]
+ 	
+\centering Arq:  01.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  02.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  03.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 1 & 0\\
+1 & 1 & 0 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  04.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 1 & 0 & 0 & 1\\
+1 & 0 & 1 & 0 & 1\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  05.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  06.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 1 & 1\\
+1 & 0 & 1 & 0 & 1\\
+1 & 1 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  07.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 0 & 1 & 1\\
+1 & 1 & 0 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  08.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  09.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 0 & 1 & 0 & 1\\
+1 & 1 & 0 & 1 & 1\\
+1 & 1 & 0 & 1 & 1\\
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 0\]
+
+\centering Arq:  10.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 0 & 1 & 0 & 1\\
+1 & 0 & 1 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  11.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  12.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  13.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  14.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 1\\
+0 & 0 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  15.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 1\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 1\\
+1 & 1 & 0 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  16.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 0 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  17.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+1 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  18.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 0 & 1\\
+0 & 0 & 1 & 0 & 1\\
+0 & 0 & 1 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  19.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 0 \end{array} \right) = saida : 1\]
+
+\centering Arq:  20.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 0 & 1 & 0\\
+0 & 0 & 1 & 1 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 2\]
+
+\centering Arq:  21.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 2\]
+
+\centering Arq:  22.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  23.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 1 & 0 & 0\\
+1 & 1 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 2\]
+
+\centering Arq:  24.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 0 & 1 \end{array} \right) = saida : 2\]
+
+\centering Arq:  25.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 0 & 1 & 0\\
+0 & 1 & 1 & 0 & 1\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 0 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  26.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+1 & 0 & 0 & 1 & 1 \end{array} \right) = saida : 2\]
+
+\centering Arq:  27.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  28.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 0 & 1\\
+0 & 1 & 0 & 1 & 0\\
+1 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 1 & 0\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  29.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  30.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  31.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  32.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  33.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 1 & 1 & 1 \end{array} \right) = saida : 3\]
+
+\centering Arq:  34.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 3\]
+
+\centering Arq:  35.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 0 & 1 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  36.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 0 & 1 & 0 \end{array} \right) = saida : 3\]
+
+\centering Arq:  37.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  38.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 1 & 1 & 1\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 1 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  39.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 0 & 1\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 0 & 1 & 1 \end{array} \right) = saida : 5\]
+
+\centering Arq:  40.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 0 & 0 & 1\\
+0 & 1 & 0 & 0 & 1\\
+0 & 1 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1 \end{array} \right) = saida : 5\]
+
+\centering Arq:  41.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0 \end{array} \right) = saida : 4\]
+
+\centering Arq:  42.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0 \end{array} \right) = saida : 4\]
+
+\centering Arq:  43.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 1 & 0\\
+0 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 1 & 0 \end{array} \right) = saida : 4\]
+
+\centering Arq:  44.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 \end{array} \right) = saida : 4\]
+
+\centering Arq:  45.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 4\]
+
+\centering Arq:  46.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 1 & 0 \end{array} \right) = saida : 4\]
+
+\centering Arq:  47.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+1 & 1 & 1 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0 \end{array} \right) = saida : 4\]
+
+\centering Arq:  48.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1 \end{array} \right) = saida : 4\]
+
+\centering Arq:  49.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0\\
+0 & 1 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 0 \end{array} \right) = saida : 4\]
+
+\centering Arq:  50.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 1 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 5\]
+
+\centering Arq:  51.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 0 & 0 & 1 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 5\]
+
+\centering Arq:  52.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 5\]
+
+\centering Arq:  53.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 1 & 0 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 5\]
+
+\centering Arq:  54.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 5\]
+
+\centering Arq:  55.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 5\]
+\centering Arq:  56.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 5\]
+\centering Arq:  57.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 0 & 1 & 1 & 1\\
+0 & 1 & 0 & 0 & 0\\
+0 & 0 & 1 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 \end{array} \right) = saida : 5\]
+\centering Arq:  58.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 0 & 1 & 1\\
+0 & 0 & 0 & 0 & 0\\
+0 & 1 & 1 & 0 & 1\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 1 & 1 & 0 & 1 \end{array} \right) = saida : 5\]
+\centering Arq:  59.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 0 & 0\\
+0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 0 & 1\\
+0 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 5\]
+
+\item Investigar qual é a saída da rede quando padrões bem diferentes de 0 e 1 são apresentados como entrada (usar padrões diferentes, por exemplo, A, E, T, H, C, N).
+
+\centering Arq:  A.txt 
+\[ \left( \begin{array}{ccccc}
+0 & 1 & 1 & 1 & 0\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1 \end{array} \right) = saida : 0\]
+
+\centering Arq:  C.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : Desconhecido\]
+
+\centering Arq:  E.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 0\\
+1 & 0 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 \end{array} \right) = saida : 4\]
+
+\centering Arq:  H.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1 \end{array} \right) = saida : 4\]
+
+\centering Arq:  N.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 0 & 0 & 0 & 1\\
+1 & 1 & 0 & 0 & 1\\
+1 & 0 & 1 & 0 & 1\\
+1 & 0 & 1 & 0 & 1\\
+1 & 0 & 0 & 1 & 1\\
+1 & 0 & 0 & 0 & 1 \end{array} \right) = saida : 1\]
+
+\centering Arq:  T.txt 
+\[ \left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 & 0 \end{array} \right) = saida : 1\]
+
+\end{enumerate}
+
+\newpage
+\section{Conclusão}
+Com a realização deste trabalho e com os resultados obtidos através dos experimentos foi possível notar algumas características das RNAs. 
+
+Na primeira RNA o objetivo era usar um neurônio para classificar os padrões 0 e 1 apenas. Após realizar o treinamento, os pesos obtidos foram distribuídos de forma que células que faziam parte tanto do padrão 0 quanto do padrão 1 não foram alteradas, portanto permaneceram com o valor 0. Já células que eram exclusivas do 0 e não estavam no 1 ficaram com valor -1 e as outras com valor 1. Com isso, as células com valor -1 ficaram em maior quantidade, pois foram necessárias mais células para representar o 0 que o 1. A implicação disso é que a houve mais caracteres parecidos com 0 ao 1.
+
+Na segunda RNA, o objetivo era o mesmo (classificar os padrões 0 e 1). No entanto, a RNA agora havia dois neurônios. Notou-se que os pesos do neurônio 0 eram os opostos do neurônio 1. Ou seja, se uma célula $a_ij$ da matriz de pesos do neurônio 0 tiver com valor -1, a mesma célula no neurônio 1 estaria com valor 1 e vice-versa. Com isso, a distribuição melhorou um pouco, mas continuou tendendo a ter mais caracteres reconhecidos como 0 ao invés de serem reconhecidos como 1. Vale ressaltar que os caracteres com poucas distorções, tanto do padrão 0 como do padrão 1 foram reconhecidos corretamente.
+
+Na terceira e última RNA, o objetivo era classificar 6 padrões diferentes (0, 1, 2, 3, 4, 5). Nota-se que a matriz de pesos do neurônio i dá mais relevância, isto é, coloca valores mais altos nas células que estão no padrão i. E coloca valores mais baixos para células que não estão no padrão i e que estão em outros padrões. Com esta RNA houve algumas entradas que a perceptron não soube decidir. No entanto, das entradas que a perceptron deu uma saída, a maioria foram saídas assertivas.
+
+\end{document}
