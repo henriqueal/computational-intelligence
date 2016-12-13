@@ -14,4 +14,8 @@ The implementation of each step can be found at:
 - codes/ex2.py
 - codes/ex3.py
 
-
+For execute this files you can just type this commands:
+```python
+s = "Python syntax highlighting"
+print s
+```
