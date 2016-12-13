@@ -14,8 +14,7 @@ The implementation of each step can be found at:
 - codes/ex2.py
 - codes/ex3.py
 
-For execute this files you can just type this commands:
+For example, if you want to execute the file ex1.py you can just type this command on terminal:
 ```python
-s = "Python syntax highlighting"
-print s
+python ex1.py
 ```
