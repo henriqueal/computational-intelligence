@@ -18,22 +18,30 @@ For example, if you want to execute the file ex1.py you can just type this comma
 ```bash
 > python ex1.py
 ```
-The results should be this format:
+The results should have this format:
 ```bash
 Epochs of training = 1
 00.txt
 [0]
 01.txt
 [0]
-02.txt
-[0]
-03.txt
-[0]
-...
-57.txt
-[0]
-58.txt
-[0]
+
+.
+.
+.
+
 59.txt
 [1]
 ```
+This results indicates:
+- How many epochs of training the perceptron spends to learn
+- For each test file : (00.txt to 59.txt) at tests/ what perceptron recognized.
+  - For example
+    - This part:
+    ```bash
+    01.txt
+    [0]
+    ```
+    Indicates that ANC recognize the input that contains in file 01.txt as a digit 0.
+    
+    
