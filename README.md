@@ -15,6 +15,7 @@ The implementation of each step can be found at:
 - codes/ex3.py
 
 For example, if you want to execute the file ex1.py you can just type this command on terminal:
-```python
+```bash
 python ex1.py
 ```
+The results should be:
