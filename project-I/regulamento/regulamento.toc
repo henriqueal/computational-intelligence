@@ -1,8 +1,0 @@
-\select@language {portuguese}
-\contentsline {section}{\numberline {1}Participantes}{3}
-\contentsline {section}{\numberline {2}Inscri\c c\~oes}{3}
-\contentsline {subsection}{\numberline {2.1}Etapas para realizar a inscri\c c\~ao}{3}
-\contentsline {subsection}{\numberline {2.2}Prazos de Inscri\c c\~oes}{3}
-\contentsline {section}{\numberline {3}Da Competi\c c\~ao}{3}
-\contentsline {section}{\numberline {4}Da premia\c c\~ao}{4}
-\contentsline {section}{\numberline {5}Advert\^encias}{4}
