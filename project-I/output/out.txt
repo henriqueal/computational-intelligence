@@ -1,0 +1,270 @@
+Semente: 1
+Individuos com fit < 100: 1
+Melhor: 57
+Media: 37792.17
+-------------------------
+Individuos com fit < 100: 1
+Melhor: 57
+Media: 23620.11
+==============================================================
+Semente: 2
+Individuos com fit < 100: 0
+Melhor: 1688
+Media: 39075.12
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 1688
+Media: 24421.95
+==============================================================
+Semente: 3
+Individuos com fit < 100: 0
+Melhor: 1293
+Media: 39597.14
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 1293
+Media: 24748.21
+==============================================================
+Semente: 4
+Individuos com fit < 100: 1
+Melhor: 79
+Media: 40758.67
+-------------------------
+Individuos com fit < 100: 1
+Melhor: 79
+Media: 25474.17
+==============================================================
+Semente: 5
+Individuos com fit < 100: 1
+Melhor: 80
+Media: 44091.48
+-------------------------
+Individuos com fit < 100: 1
+Melhor: 80
+Media: 27557.18
+==============================================================
+Semente: 6
+Individuos com fit < 100: 0
+Melhor: 373
+Media: 42162.72
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 373
+Media: 26351.70
+==============================================================
+Semente: 7
+Individuos com fit < 100: 0
+Melhor: 337
+Media: 38015.24
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 337
+Media: 23759.53
+==============================================================
+Semente: 8
+Individuos com fit < 100: 0
+Melhor: 375
+Media: 39776.02
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 375
+Media: 24860.01
+==============================================================
+Semente: 9
+Individuos com fit < 100: 0
+Melhor: 511
+Media: 43211.45
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 511
+Media: 27007.16
+==============================================================
+Semente: 10
+Individuos com fit < 100: 0
+Melhor: 167
+Media: 40060.03
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 167
+Media: 25037.52
+==============================================================
+Semente: 11
+Individuos com fit < 100: 0
+Melhor: 1042
+Media: 38089.84
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 1042
+Media: 23806.15
+==============================================================
+Semente: 12
+Individuos com fit < 100: 0
+Melhor: 235
+Media: 38214.38
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 235
+Media: 23883.99
+==============================================================
+Semente: 13
+Individuos com fit < 100: 0
+Melhor: 118
+Media: 40868.89
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 118
+Media: 25543.06
+==============================================================
+Semente: 14
+Individuos com fit < 100: 1
+Melhor: 1
+Media: 41514.38
+-------------------------
+Individuos com fit < 100: 1
+Melhor: 1
+Media: 25946.49
+==============================================================
+Semente: 15
+Individuos com fit < 100: 0
+Melhor: 1200
+Media: 39424.10
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 1200
+Media: 24640.06
+==============================================================
+Semente: 16
+Individuos com fit < 100: 0
+Melhor: 190
+Media: 35535.75
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 190
+Media: 22209.84
+==============================================================
+Semente: 17
+Individuos com fit < 100: 0
+Melhor: 300
+Media: 42232.54
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 300
+Media: 26395.34
+==============================================================
+Semente: 18
+Individuos com fit < 100: 0
+Melhor: 695
+Media: 41207.42
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 695
+Media: 25754.64
+==============================================================
+Semente: 19
+Individuos com fit < 100: 0
+Melhor: 994
+Media: 39401.61
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 994
+Media: 24626.01
+==============================================================
+Semente: 20
+Individuos com fit < 100: 0
+Melhor: 883
+Media: 37559.22
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 883
+Media: 23474.51
+==============================================================
+Semente: 21
+Individuos com fit < 100: 0
+Melhor: 445
+Media: 41191.46
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 445
+Media: 25744.66
+==============================================================
+Semente: 22
+Individuos com fit < 100: 0
+Melhor: 1872
+Media: 40700.61
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 1872
+Media: 25437.88
+==============================================================
+Semente: 23
+Individuos com fit < 100: 0
+Melhor: 447
+Media: 38124.85
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 447
+Media: 23828.03
+==============================================================
+Semente: 24
+Individuos com fit < 100: 0
+Melhor: 111
+Media: 42694.87
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 111
+Media: 26684.29
+==============================================================
+Semente: 25
+Individuos com fit < 100: 0
+Melhor: 197
+Media: 41202.20
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 197
+Media: 25751.38
+==============================================================
+Semente: 26
+Individuos com fit < 100: 0
+Melhor: 2004
+Media: 39273.05
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 2004
+Media: 24545.66
+==============================================================
+Semente: 27
+Individuos com fit < 100: 0
+Melhor: 298
+Media: 42644.03
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 298
+Media: 26652.52
+==============================================================
+Semente: 28
+Individuos com fit < 100: 0
+Melhor: 873
+Media: 41256.37
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 873
+Media: 25785.23
+==============================================================
+Semente: 29
+Individuos com fit < 100: 0
+Melhor: 515
+Media: 41333.30
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 515
+Media: 25833.31
+==============================================================
+Semente: 30
+Individuos com fit < 100: 0
+Melhor: 497
+Media: 45240.73
+-------------------------
+Individuos com fit < 100: 0
+Melhor: 497
+Media: 28275.46
+==============================================================

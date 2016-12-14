@@ -1,0 +1,10 @@
+typedef struct individuo Individuo;
+int SortearNumero(int divisor);
+void ZerarVetorVisitados();
+void GerarPopulacaoInicial();
+int CalcularFit(int n, int k);
+int MelhoresFit(int n);
+void ExibirPopulacao();
+int CalcularDistribuicao();
+int Torneio(int n);
+int Melhor();
