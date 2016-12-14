@@ -7,5 +7,5 @@ There are three projects:
   - project-II: it's a project of Artifical Neural Network (ANC) to recognize some digits.
   - project-III: it's a project of Ant Colony Optimization (ACO) to resolve Travel Salesman Problem (TSP).
   
-In each path, contains a specific README.md.
+Each path contains a specific README.md.
 
