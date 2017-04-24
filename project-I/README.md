@@ -21,7 +21,7 @@ The code expects 4 arguments:
   - Second: type of selection:
     - 0: Tournment 
     - 1: Roulette
-  - Third: type of einsertion:
+  - Third: type of reinsertion:
     - 0: Sorted
     - 1: Elitism
   - Fourth: type of cryptarithmetic problem:
